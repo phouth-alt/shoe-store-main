@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>E-Commerce Shoes</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <!--added a cdn link by searching font awesome4 cdn and getting this link from https://www.bootstrapcdn.com/fontawesome/ this url*/-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <!--<div class ="header">-->
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="Image/logoforweb-removebg-preview.png" width="125px"></a>
+                </div>
+               <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                         <li><a href="products.html">Products</a></li>
+                         <li><a href="">About</a></li>
+                         <li><a href="">Contact</a></li>
+                         <li>
+                             <a href="account.html">
+                                 <div class="container"  >
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">Air Force 1</option>
+                                        <option value="2">Dunk Low</option>
+                                        <option value="3">Life Style</option>
+                                    </select>
+                                </div>
+                             </a>
+                         </li>
+
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="Image/shop-removebg-preview.png" width="30px" height="30px" style="transform: translateX(0px) translateY( 5px)" ></a>
+                <img src="Image/menu.png" class="menu-icon" onClick="menutoggle()" >
+            </div>
+
+        </div>
+    <!--</div>-->
+
+
+        <!------------------------------ Products------------------------------>
+        <div class="small-container">
+            <div class="row row-2">
+                <h2>All LifeStyle Products</h2>
+
+            </div>
+
+
+            <!--<h2 class="title" >Featured Products</h2>-->
+
+            <div class="row">
+
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="Image/LifeStyle/AIR+FORCE+1+'07+LV8120.png"></a>
+                        <a href="products-details.html"><h4>Air Force 1'07 LV8</h4></a>
+                        <div class="rating">
+
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-half-o" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$120.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="Image/LifeStyle/AIR+MAX+270160.png"></a>
+                        <h4>Nike Air Max 270</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-half-o" ></i>
+                        </div>
+                        <p>$160.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="Image/LifeStyle/AIR+MAX+DN+SE170.png"></a>
+                        <h4>Nike Air Max DN SE</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$170.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="Image/LifeStyle/BLAZER+MID+'77+VNTG84.97.png"></a>
+                        <h4>Nike Blazer Mid '77 Vintage</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$84.97</p>
+                    </div>
+                </div>
+
+            <!-------------- new row----------------->
+
+            <div class="row">
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="Image/LifeStyle/NIKE+AIR+PEGASUS+2005160.png"></a>
+                        <h4>Nike Air Pegasus 2005</h4>
+                        <div class="rating">
+
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-half-o" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$160.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="Image/LifeStyle/NIKE+LUNAR+ROAM+PRM104.97.png"></a>
+                        <h4>Nike Lunar Roam Premium </h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-half-o" ></i>
+                        </div>
+                        <p>$104.97</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="Image/LifeStyle/NIKE+P-6000110.png"></a>
+                        <h4>Nike P-6000</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$110.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="Image/LifeStyle/NIKE+ZOOM+VOMERO+ROAM180.png"></a>
+                        <h4>Nike Zoom Vomero Roam</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$180.00</p>
+                    </div>
+                </div>
+            <!--new row for the latest product-->
+                <div class="row">
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="Image/LifeStyle/NikeC1tyBrownStone100.jpg"></a>
+                        <h4>Nike C1TY BrownStone</h4>
+                        <div class="rating">
+
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-half-o" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$100.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="Image/LifeStyle/NIKE+DUNK+LOW+RETRO+PRM106.97.png"></a>
+                        <h4>Nike Dunk Low Retro Premium</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-half-o" ></i>
+                        </div>
+                        <p>$106.97</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="Image/LifeStyle/NIKE+CALM+MULE+NA60.png"></a>
+                        <h4>Nike Calm</h4>
+                        <div class="rating">
+                            <i class="fa fa-star-o" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$60.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="Image/LifeStyle/AIR+MORE+UPTEMPO+LOW160.png"></a>
+                        <h4>Nike Air More Uptempo Low</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$160.00</p>
+                    </div>
+                </div>
+
+            <div class="page-btn">
+                <span><a href="products.html">1</a></span>
+                <span><a href="productsdunklow.html">2</a></span>
+                <span><a href="productsjordan.html">3</a></span>
+                <span><a href="productsSportshoes.html">4</a></span>
+                <span><a href="">&#8594;</a></span> <!-- Example for next page -->
+            </div>
+
+        </div>
+
+
+        <!----------------------------------footer------------------------------------->
+        <div class ="footer">
+        <div class="container">
+
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="Image/play-store.png" alt="">
+                        <img src="Image/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <a href="index.html"><img src="Image/logoforweb-removebg-preview.png"></a>
+                    <p>Our purpose of selling streetwear shoes is to provide trendy, high-quality footwear that resonates with the urban culture and appeals to fashion-forward consumers.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                   <ul>
+                       <li>Coupons</li>
+                       <li>Blog Post</li>
+                       <li>Return Policy</li>
+                       <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                   <ul>
+                       <li>Facebook</li>
+                       <li>Twitter</li>
+                       <li>Instagram</li>
+                       <li>Youtube</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr><!--horizontal line-->
+            <p class="copyright">Copyright 2024 - Team Thrasher</p>
+
+        </div>
+    </div>
+
+
+        <!-----------------------------------js for toggle menu----------------------------------------------->
+        <script>
+            var menuItems=document.getElementById("MenuItems");
+
+            MenuItems.style.maxHeight="0px";
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px"){
+                    MenuItems.style.maxHeight="200px";
+                }
+                else{
+                    MenuItems.style.maxHeight="0px";
+                }
+            }
+        </script>
+    </body>
+</html>

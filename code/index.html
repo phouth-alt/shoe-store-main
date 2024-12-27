@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>E-commerce Shoes</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <!--added a cdn link by searching font awesome4 cdn and getting this link from https://www.bootstrapcdn.com/fontawesome/ this url*/-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+    <body>
+        <div class ="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="Image/logoforweb-removebg-preview.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                         <li><a href="products.html">Products</a></li>
+                         <li><a href="">About Us</a></li>
+                         <li><a href="">Sign In</a></li>
+                         <li>
+                             <a href="account.html">
+                                 <div class="input-group rounded search-container">
+                                    <input type="search" class="form-control custom-search" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                                    <span class="input-group-text custom-addon" id="search-addon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                 </div>
+                             </a>
+                         </li>
+
+                    </ul>
+                </nav>
+                <a href="Image/cart.html"><img src="Image/shop-removebg-preview.png" width="30px" height="30px" style="transform: translateX(0px) translateY(5px)"></a>
+                <img src="Image/menu.png" class="menu-icon" onClick="menutoggle()" >
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Gain More Confident <br>With A New Style!</h1>
+                    <p>Success isn't always about greatness. It's about consistency. Consistent<br>hard work gains success. Greatness will come.</p>
+                    <a href="Image/products.html" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="https://i.pinimg.com/736x/fc/4a/77/fc4a77aba0048fdfb3ff5e63b002225f.jpg" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!------------------------------ featured categories------------------------------>
+        <div class="categories">
+            <div class="small-container">
+                <div class="row">
+                <div class="col-3">
+                    <img src="https://i.pinimg.com/736x/79/d0/a7/79d0a70e12866d158d8223c79b85a85f.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="https://i.pinimg.com/736x/1e/b5/49/1eb549ff582bb8c97f29529e366445a6.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="https://i.pinimg.com/736x/08/b9/1b/08b91b0c4e46d70e15b2874c2eed6d68.jpg">
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!------------------------------ featured Products------------------------------>
+        <div class="small-container">
+            <h2 class="title" >Featured Products</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b724fe9e-49e5-410d-8354-8618154fc224/NIKE+DUNK+LOW+RETRO+SE.png"></a>
+                        <a href="products-details.html"><h4>Nike Dunk Low Retro SE</h4></a>
+                        <div class="rating">
+                            <!--(before this added awesome4 cdn font link to the head)added a cdn link by searching font awesome4 icon and from the site  search the star entering the first option and getting a link of this fa-star*-->
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-half-o" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$125.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3ea1951b-cf47-4bef-8e96-510ef54b2ec1/NIKE+C1TY.png"></a>
+                        <h4>Nike Vaporfly 3</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-half-o" ></i>
+                        </div>
+                        <p>$260.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1bcbca4-e853-4df7-b329-5be3c61ee057/NIKE+DUNK+LOW+RETRO.png"></a>
+                        <h4>Nike Dunk Low Retro</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$86.97</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ba9dc751-323e-4ab6-9a99-60ac002a9867/NIKE+DUNK+LOW+JP+QS.png"></a>
+                        <h4>Nike Dunk Low JP</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$120.00</p>
+                    </div>
+                </div>
+
+
+             <h2 class="title" >Latest Products</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/be65c493-3b60-450e-ba1a-a72110b6acf9/NIKE+ZOOM+VOMERO+ROAM.png"></a>
+                        <h4>Nike Zoom Vomero Roam</h4>
+                        <div class="rating">
+                            <!--(before this added awesome4 cdn font link to the head)added a cdn link by searching font awesome4 icon and from the site  search the star entering the first option and getting a link of this fa-star*-->
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-half-o" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$180.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1e2ce8a9-1452-455c-b637-beca735ab9ac/W+NIKE+DUNK+LOW+NEXT+NATURE.png"></a>
+                        <h4>Nike Dunk Low Next Nature</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-half-o" ></i>
+                        </div>
+                        <p>$115.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f1c72460-d76f-488b-acd3-5460b4076cd6/W+AIR+FORCE+1+%2707+NEXT+NATURE.png"></a>
+                        <h4>Nike Air Force 1 '07 Next Nature</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$115.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/bc8cab4c-f0fb-4c69-949f-55ae78b7aa84/AIR+FORCE+1+%2707.png"></a>
+                        <h4>Nike Air Force 1 ’07</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$135.00</p>
+                    </div>
+                </div>
+            <!--new row for the latest product-->
+                <div class="row">
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f25ae29f-58a2-4fd3-922f-2d714068ff71/NIKE+DUNK+LOW+RETRO+LTD.png"></a>
+                        <h4>Nike Dunk Low Retro</h4>
+                        <div class="rating">
+                            <!--(before this added awesome4 cdn font link to the head)added a cdn link by searching font awesome4 icon and from the site  search the star entering the first option and getting a link of this fa-star*-->
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-half-o" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$130.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d588590f-5909-4657-8350-e739ba4a84ee/NIKE+DUNK+LOW+RETRO.png"></a>
+                        <h4>Nike Dunk Low Retro </h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-half-o" ></i>
+                        </div>
+                        <p>$48.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ade3bd8a-2561-4bf9-b562-100b07b65103/NIKE+DUNK+LOW+SE+%28GS%29.png"></a>
+                        <h4>Nike Dunk High</h4>
+                        <div class="rating">
+                            <i class="fa fa-star-o" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$69.00</p>
+                    </div>
+                    <div class="col-4">
+                        <a href="products-details.html"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/43bea453-caeb-4d63-a6a0-9c14fa96e33f/W+NIKE+DUNK+LOW.png"></a>
+                        <h4>Nike Dunk Low</h4>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <p>$102.00</p>
+                    </div>
+                </div>
+            </div>
+
+        <!--------------------------`   offer   --------------------------------->
+        <div class="offer">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="https://i.pinimg.com/736x/72/1b/f0/721bf09dfda3a8fe81c90acc3bd830f1.jpg" class="offer-img" >
+                    </div>
+                    <div class="col-2">
+                        <p>Exclusively Available on RedStore</p>
+                        <h1>Jordan Shoes</h1>
+                        <small> Buy latest collections of sports shoes online on Redstore at best prices from top brands such as Adidas, Nike, Puma, Asics, and Sparx at your leisure at best prices. </small><br>
+                        <a href="products.html" class="btn">Buy Now &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!------------------------------Testimonial---------------------------------->
+        <div class="testimonial">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <i class="fa fa-quote-left" ></i>
+                        <p>Lock in your style with this AJ1. We kept everything you love about the classic design—premium leather, Air cushioning, our iconic Wings logo—while adding an innovative closure system that makes getting these on and off a breeze. Getting out the door is now quicker than ever: just strap and zip. </p>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/9b/27/b4/9b27b4b133e8b20860a2a30675d7bcc2.jpg">
+                        <h3>Phan Phouth</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left" ></i>
+                        <p> it conveys that money might not be the ultimate goal or purpose in life, but having no money can cause significant hardships, forcing us to recognize its practical value even if we ideologically downplay its importance.</p>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/3b/96/aa/3b96aa5367f35b7bca49d0d3cb33515c.jpg">
+                        <h3>Vutthin Vatanak</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left" ></i>
+                        <p>believe in your potential, keep striving, and hold onto hope. Remember, life’s greatest achievements often come after its toughest trials. Your story isn’t over yet; the best chapters are still ahead. </p>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/e8/56/9a/e8569ad16b1cbaa544ce1ef804199da2.jpg">
+                        <h3>Tith Sopanha</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left" ></i>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                        <div class="rating">
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star" ></i>
+                            <i class="fa fa-star-o" ></i>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/b8/10/89/b810896fc56d05a5f9a8e6ab6d1d0d34.jpg">
+                        <h3>Reaksa</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!----------------------------------Brands------------------------------------>
+        <div class="brands">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-5">
+                        <img src="https://mms.businesswire.com/media/20240429744210/en/2113615/23/Amazon_logo.jpg" alt=""  >
+                    </div>
+                    <div class="col-5">
+                        <img src="https://theme-assets.ecommercedns.uk/7/72127/images/Shopify-Logo.png?v=6932" alt="" >
+                    </div>
+                    <div class="col-5" >
+                        <img src="https://cadt.edu.kh/wp-content/uploads/2022/03/Call-for-Application-Mekong-Lancang-Digital-Technology-Scholarship.jpg" alt="" >
+                    </div>
+                    <div class="col-5">
+                        <img src="https://asset.cambodia.gov.kh/mptc/media/MPTC-MRD-2023_Logo-MPTC-MRD-2023.png" alt="">
+                    </div>
+                    <div class="col-5">
+                        <img src="https://img.alicdn.com/tfs/TB1giluwEY1gK0jSZFMXXaWcVXa-1280-1280.png_.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!----------------------------------footer------------------------------------->
+        <div class ="footer">
+        <div class="container">
+
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="Image/play-store.png" alt="">
+                        <img src="Image/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="Image/logoforweb-removebg-preview.png">
+                    <p>Our purpose of selling streetwear shoes is to provide trendy, high-quality footwear that resonates with the urban culture and appeals to fashion-forward consumers.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                   <ul>
+                       <li>Coupons</li>
+                       <li>Blog Post</li>
+                       <li>Return Policy</li>
+                       <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                   <ul>
+                       <li>Facebook</li>
+                       <li>Twitter</li>
+                       <li>Instagram</li>
+                       <li>Youtube</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr><!--horizontal line-->
+            <p class="copyright">Copyright 2024 - Team Thrasher <br> Merry Christmas Guys!</p>
+
+        </div>
+    </div>
+
+
+        <!-----------------------------------js for toggle menu----------------------------------------------->
+        <script>
+            var menuItems=document.getElementById("MenuItems");
+
+            MenuItems.style.maxHeight="0px";
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px"){
+                    MenuItems.style.maxHeight="200px";
+                }
+                else{
+                    MenuItems.style.maxHeight="0px";
+                }
+            }
+        </script>
+    </body>
+</html>
