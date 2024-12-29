@@ -1,4 +1,4 @@
-const Product = require("./models/productModel");
+const items = require("./models/productModel");
 const upload = require('../config/multer');
 
 exports.getAllProducts = async (req,res) => {
