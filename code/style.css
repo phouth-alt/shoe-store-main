@@ -65,6 +65,7 @@ p{
     font-size: 50px;
     line-height: 60px;
     margin: 25px 0;
+
 }
 
 .btn{
@@ -401,6 +402,8 @@ input:focus{
 .small-img-row{
    display:flex;
     justify-content: space-between;
+    margin-right : 50px;
+    margin-bottom: 70px;
 }
 .small-img-col{
     flex-basis: 24%;

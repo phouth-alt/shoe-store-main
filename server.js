@@ -17,6 +17,15 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
+	store: new (require('express-sessions'))({
+		storage: 'mongodb',
+		instance: mongoose, // optional
+		host: 'localhost', // optional
+		port: 27017, // optional
+		db: 'test', // optional
+		collection: 'sessions', // optional
+		expire: 86400 // optional
+	}),
 	secret: 'secret',
 	cookie: { maxAge: 60000 },
 	resave: false,
