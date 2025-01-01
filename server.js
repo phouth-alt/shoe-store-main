@@ -1,25 +1,34 @@
-require('dotenv').config()
+require('dotenv').config();
 const express = require('express');
 const app = express();
+const path = require('path');
+const methodOverride = require('method-override');
 const session = require('express-session');
+const passport = require('passport');
+const flash = require('connect-flash');
+const { PORT } = process.env;
 
-const productRoutes = require('./routes/productRoutes');
-const userRoutes = require('./routes/userRoutes');
+// Passport config
+require('./config/passport')(passport);
+
 // Middleware
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(methodOverride('_method'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
 	secret: 'secret',
-	resave: true,
+	cookie: { maxAge: 60000 },
+	resave: false,
 	saveUninitialized: true
 }));
-
-app.set('view engine','ejs');
-
-const PORT = process.env.PORT || 3000;
-
-app.use('/uploads', express.static('public/uploads'));
-app.use('/product',productRoutes);
-
-app.listen(PORT,()=>{
-    console.log("server is running on port "+PORT);
-});
+	app.use(passport.initialize());
+	// Flash messages middleware
+	app.use((req, res, next) => {
+		res.locals.success_msg = req.flash('success_msg');
+		res.locals.error_msg = req.flash('error_msg');
+		res.locals.error = req.flash('error');
+		next();
+	});
+	app.use(passport.session());
+	app.use(flash());

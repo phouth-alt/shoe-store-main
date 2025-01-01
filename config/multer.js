@@ -1,39 +1,32 @@
 const multer = require('multer');
 const path = require('path');
-
-// Set up storage configuration
+// Set Storage Engine
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, './public/uploads'); // Directory for uploaded files
-  },
-  filename: (req, file, cb) => {
-    // Add timestamp to the original filename to avoid duplicates
-    const timestamp = Date.now();
-    const originalName = path.basename(file.originalname, path.extname(file.originalname));
-    const ext = path.extname(file.originalname);
-
-    cb(null, `${originalName}-${timestamp}${ext}`); // Combine original name, timestamp, and extension
-  }
+    destination: './public/uploads/',
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+    }
 });
-
-// File filter (optional)
-const fileFilter = (req, file, cb) => {
-  const fileTypes = /jpeg|jpg|png|gif/;
-  const extname = fileTypes.test(path.extname(file.originalname).toLowerCase());
-  const mimetype = fileTypes.test(file.mimetype);
-
-  if (extname && mimetype) {
-    return cb(null, true);
-  } else {
-    cb('Error: Images Only!');
-  }
-};
-
-// Set up multer upload
+// Init Upload
 const upload = multer({
-  storage: storage,
-  limits: { fileSize: 10 * 1024 * 1024 }, // Limit to 10 MB
-  fileFilter: fileFilter
-});
-
+    storage: storage,
+    limits: { fileSize: 1000000 },
+    fileFilter: function (req, file, cb) {
+        checkFileType(file, cb);
+    }
+}).single('image');
+// Check File Type
+function checkFileType(file, cb) {
+    // Allowed ext
+    const filetypes = /jpeg|jpg|png|gif/;
+    // Check ext
+    const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+    // Check mime
+    const mimetype = filetypes.test(file.mimetype);
+    if (mimetype && extname) {
+        return cb(null, true);
+    } else {
+        cb('Error: Images Only!');
+    }
+}
 module.exports = upload;

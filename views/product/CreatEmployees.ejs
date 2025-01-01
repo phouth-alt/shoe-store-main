@@ -1,0 +1,31 @@
+<%- include('../partials/header') %>
+
+<h1 class="mb-4">Add New Employee</h1>
+
+<form action="/employee" method="post" class="card p-4"  enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" required id="name">
+    </div>
+    <div class="mb-3">
+        <label for="id" class="form-label">ID</label>
+        <input type="id" class="form-control" name="id" required id="id">
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">Phone</label>
+        <input type="text" class="form-control" name="phone" required id="phone">
+    </div>
+    <div class="mb-3">
+        <label for="department" class="form-label">Department</label>
+        <input type="text" class="form-control" name="department" required id="department">
+        <input type="file" class="form-control" name="image" id="image" accept="image/*">
+      </div>
+    <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <textarea name="address" id="address"  class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mb-4">Save</button>
+    <a href="/employee" class="btn btn-secondary">Cancel</a>
+</form>
+
+<%- include('../partials/footer') %>

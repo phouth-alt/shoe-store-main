@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+
+<h1 class="mb-4">Edit Employee</h1>
+<form action="/employee/<%= employee.id %>?_method=PUT" method="POST" class="card p-4"  enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" id="name" name="name" class="form-control" value="<%= employee.name %>" required />
+    </div>
+    <div class="mb-3">
+    <label for="id" class="form-label
+    ">ID</label>
+    <input type="id" id="id" name="id" class="form-control" value="<%= employee.id %>" required />
+    </div>
+    <div class="mb-3">
+    <label for="phone" class="form-label
+    ">Phone</label>
+    <input type="text" id="phone" name="phone" class="form-control" value="<%= employee.phone %>" required />
+    </div>
+    <div class="mb-3">
+    <label for="department" class="form-label
+    ">Department</label>
+    <input type="text" id="department" name="department" class="form-control" value="<%= employee.department %>" required />
+    </div>
+    <div class="mb-3">
+    <label for="address" class="form-label
+    ">Address</label>
+    <textarea id="address" name="address" class="form-control" required> <%= employee.address %></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a href="/employee" class="btn btn-secondary">Cancel</a>
+    </form>
+    <%- include('../partials/footer') %>
+    
