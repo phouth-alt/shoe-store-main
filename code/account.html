@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in or create an account with Thrasher.">
+    <title>Sign in - Thrasher</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="Image/logoforweb-removebg-preview.png" alt="Thrasher home"></a>
+            </div>
+            <nav aria-label="Main navigation">
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="nav-shop">
+                        <a href="products.html">Shop <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <ul class="nav-dropdown" aria-label="Shop categories">
+                            <li><a href="products.html">All shoes</a></li>
+                            <li><a href="productsdunklow.html">Dunk Low</a></li>
+                            <li><a href="productsjordan.html">Jordan</a></li>
+                            <li><a href="productsSportshoes.html">Sport shoes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html" aria-current="page">Sign in</a></li>
+                </ul>
+            </nav>
+            <button class="menu-icon" type="button" aria-label="Toggle navigation" aria-controls="MenuItems" aria-expanded="false" onclick="menutoggle()">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <section class="auth-layout">
+            <div class="auth-story">
+                <p class="page-eyebrow">WELCOME TO THRASHER</p>
+                <h1>Your next favorite pair starts here.</h1>
+                <p>Sign in to pick up where you left off, or create an account to start building your rotation.</p>
+                <div class="auth-story-note">
+                    <span aria-hidden="true"><i class="fa fa-bolt"></i></span>
+                    <p>Good shoes. Fresh perspective. Every day.</p>
+                </div>
+                <a class="auth-back-link" href="products.html">Explore the collection <span aria-hidden="true">→</span></a>
+            </div>
+
+            <section class="auth-card" aria-label="Account access">
+                <div class="auth-tabs" role="tablist" aria-label="Choose an account action">
+                    <button class="auth-tab is-active" id="signin-tab" type="button" role="tab" aria-selected="true" aria-controls="signin-panel">Sign in</button>
+                    <button class="auth-tab" id="signup-tab" type="button" role="tab" aria-selected="false" aria-controls="signup-panel">Create account</button>
+                </div>
+
+                <div class="auth-panel" id="signin-panel" role="tabpanel" aria-labelledby="signin-tab">
+                    <p class="auth-kicker">GOOD TO HAVE YOU BACK</p>
+                    <h2>Sign in</h2>
+                    <p class="auth-description">Use your email and password to continue.</p>
+                    <form class="auth-form" id="signin-form">
+                        <label for="signin-email">Email address</label>
+                        <input id="signin-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                        <div class="auth-label-row">
+                            <label for="signin-password">Password</label>
+                        </div>
+                        <input id="signin-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+                        <button class="btn auth-submit" type="submit">Sign in <span aria-hidden="true">→</span></button>
+                        <p class="auth-feedback" id="signin-feedback" role="status" aria-live="polite"></p>
+                    </form>
+                    <p class="auth-demo-note">Account sign-in isn’t connected in this preview.</p>
+                </div>
+
+                <div class="auth-panel" id="signup-panel" role="tabpanel" aria-labelledby="signup-tab" hidden>
+                    <p class="auth-kicker">JOIN THE ROTATION</p>
+                    <h2>Create account</h2>
+                    <p class="auth-description">Set up an account to get started.</p>
+                    <form class="auth-form" id="signup-form">
+                        <label for="signup-name">Your name</label>
+                        <input id="signup-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+                        <label for="signup-email">Email address</label>
+                        <input id="signup-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                        <label for="signup-password">Create a password</label>
+                        <input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required>
+                        <button class="btn auth-submit" type="submit">Create account <span aria-hidden="true">→</span></button>
+                        <p class="auth-feedback" id="signup-feedback" role="status" aria-live="polite"></p>
+                    </form>
+                    <p class="auth-demo-note">Account creation isn’t connected in this preview.</p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">Copyright 2026 - Team Thrasher</p>
+        </div>
+    </footer>
+
+    <script>
+        var menu = document.getElementById("MenuItems");
+        var menuButton = document.querySelector(".menu-icon");
+
+        function menutoggle() {
+            var isOpen = menuButton.getAttribute("aria-expanded") === "true";
+            menu.classList.toggle("is-open", !isOpen);
+            menu.style.maxHeight = isOpen ? "0px" : menu.scrollHeight + 24 + "px";
+            menuButton.setAttribute("aria-expanded", String(!isOpen));
+        }
+
+        var signinTab = document.getElementById("signin-tab");
+        var signupTab = document.getElementById("signup-tab");
+        var signinPanel = document.getElementById("signin-panel");
+        var signupPanel = document.getElementById("signup-panel");
+
+        function selectAuthPanel(showSignup) {
+            signinTab.classList.toggle("is-active", !showSignup);
+            signupTab.classList.toggle("is-active", showSignup);
+            signinTab.setAttribute("aria-selected", String(!showSignup));
+            signupTab.setAttribute("aria-selected", String(showSignup));
+            signinPanel.hidden = showSignup;
+            signupPanel.hidden = !showSignup;
+            document.title = showSignup ? "Create account - Thrasher" : "Sign in - Thrasher";
+        }
+
+        signinTab.addEventListener("click", function () {
+            selectAuthPanel(false);
+        });
+        signupTab.addEventListener("click", function () {
+            selectAuthPanel(true);
+        });
+
+        document.querySelectorAll(".auth-form").forEach(function (form) {
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                var feedback = form.querySelector(".auth-feedback");
+                feedback.textContent = "This preview doesn’t have account services connected yet.";
+            });
+        });
+    </script>
+</body>
+</html>
