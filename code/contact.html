@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Team Thrasher with questions about our shoe collections.">
+    <title>Contact - Thrasher</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="Image/logoforweb-removebg-preview.png" alt="Thrasher home"></a>
+            </div>
+            <nav aria-label="Main navigation">
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="nav-shop">
+                            <a href="products.html">Shop <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <ul class="nav-dropdown" aria-label="Shop categories">
+                                <li><a href="products.html">All shoes</a></li>
+                                <li><a href="productsdunklow.html">Dunk Low</a></li>
+                                <li><a href="productsjordan.html">Jordan</a></li>
+                                <li><a href="productsSportshoes.html">Sport shoes</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+            </nav>
+            <button class="menu-icon" type="button" aria-label="Toggle navigation" aria-controls="MenuItems" aria-expanded="false" onclick="menutoggle()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        </div>
+    </header>
+
+    <main class="info-page">
+        <section class="page-hero contact-hero">
+            <div class="small-container">
+                <p class="page-eyebrow">LET'S TALK SHOES</p>
+                <h1>How can we help?</h1>
+                <p>Looking for a style or have a question about the collection? Start by exploring our product pages.</p>
+            </div>
+        </section>
+
+        <section class="small-container contact-content">
+            <div class="contact-intro">
+                <p class="page-eyebrow">CONTACT THRASHER</p>
+                <h2>We’re here to help you find your next pair.</h2>
+                <p>Browse the collection for product details and available options. This preview does not yet have a configured support inbox or message service, so we can’t receive messages through a contact form.</p>
+                <a class="btn" href="products.html">Browse products <span aria-hidden="true">→</span></a>
+            </div>
+            <aside class="contact-card">
+                <span class="info-card-icon" aria-hidden="true"><i class="fa fa-commenting-o"></i></span>
+                <h2>Need product details?</h2>
+                <p>Visit a product page to review its description, images, and available sizes.</p>
+                <a href="productsdunklow.html">Shop Dunk Low <span aria-hidden="true">→</span></a>
+                <a href="productsSportshoes.html">Shop sport shoes <span aria-hidden="true">→</span></a>
+                <a href="productsjordan.html">Shop Jordan <span aria-hidden="true">→</span></a>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">Copyright 2026 - Team Thrasher</p>
+        </div>
+    </footer>
+
+    <script>
+                    var currentPage = decodeURIComponent(window.location.pathname.split("/").pop() || "index.html");
+            document.querySelectorAll("#MenuItems a").forEach(function (link) {
+                var linkPage = decodeURIComponent(new URL(link.href).pathname.split("/").pop());
+                if (linkPage === currentPage) {
+                    link.setAttribute("aria-current", "page");
+                }
+            });
+
+            if (!document.querySelector("#MenuItems a[aria-current=page]")) {
+                document.querySelector("#MenuItems .nav-shop > a").setAttribute("aria-current", "page");
+            }
+
+function menutoggle() {
+            var menu = document.getElementById("MenuItems");
+            var button = document.querySelector(".menu-icon");
+            var isOpen = button.getAttribute("aria-expanded") === "true";
+            menu.classList.toggle("is-open", !isOpen);
+                menu.style.maxHeight = isOpen ? "0px" : menu.scrollHeight + 24 + "px";
+            button.setAttribute("aria-expanded", String(!isOpen));
+        }
+    </script>
+</body>
+</html>

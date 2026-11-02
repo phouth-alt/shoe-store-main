@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>All Products - Redstore</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,18 +19,23 @@
                 <div class="logo">
                     <a href="index.html"><img src="Image/logoforweb-removebg-preview.png" width="125px"></a>
                 </div>
-                <nav>
+                <nav aria-label="Main navigation">
                     <ul id="MenuItems">
                         <li><a href="index.html">Home</a></li>
-                         <li><a href="products.html">Products</a></li>
-                         <li><a href="">About</a></li>
-                         <li><a href="">Contact</a></li>
-                         <li><a href="account.html">Account</a></li>
-
+                        <li class="nav-shop">
+                            <a href="products.html">Shop <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <ul class="nav-dropdown" aria-label="Shop categories">
+                                <li><a href="products.html">All shoes</a></li>
+                                <li><a href="productsdunklow.html">Dunk Low</a></li>
+                                <li><a href="productsjordan.html">Jordan</a></li>
+                                <li><a href="productsSportshoes.html">Sport shoes</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
-                <a href="cart.html"><img src="Image/shop-removebg-preview.png" width="30px" height="30px"></a>
-                <img src="Image/menu.png" class="menu-icon" onClick="menutoggle()" >
+                <button class="menu-icon" type="button" aria-label="Toggle navigation" aria-controls="MenuItems" aria-expanded="false" onclick="menutoggle()"><i class="fa fa-bars" aria-hidden="true"></i></button>
             </div>
 
         </div>
@@ -198,16 +203,27 @@ Soft Grey and Harbour Blue</h1>
 
         <!-----------------------------------js for toggle menu----------------------------------------------->
         <script>
-            var menuItems=document.getElementById("MenuItems");
+                        var menu = document.getElementById("MenuItems");
+            var menuButton = document.querySelector(".menu-icon");
+            menu.style.maxHeight = "0px";
 
-            MenuItems.style.maxHeight="0px";
-            function menutoggle(){
-                if(MenuItems.style.maxHeight == "0px"){
-                    MenuItems.style.maxHeight="200px";
+                        var currentPage = decodeURIComponent(window.location.pathname.split("/").pop() || "index.html");
+            document.querySelectorAll("#MenuItems a").forEach(function (link) {
+                var linkPage = decodeURIComponent(new URL(link.href).pathname.split("/").pop());
+                if (linkPage === currentPage) {
+                    link.setAttribute("aria-current", "page");
                 }
-                else{
-                    MenuItems.style.maxHeight="0px";
-                }
+            });
+
+            if (!document.querySelector("#MenuItems a[aria-current=page]")) {
+                document.querySelector("#MenuItems .nav-shop > a").setAttribute("aria-current", "page");
+            }
+
+function menutoggle() {
+                var isOpen = menuButton.getAttribute("aria-expanded") === "true";
+                menu.classList.toggle("is-open", !isOpen);
+                menu.style.maxHeight = isOpen ? "0px" : menu.scrollHeight + 24 + "px";
+                menuButton.setAttribute("aria-expanded", String(!isOpen));
             }
         </script>
 

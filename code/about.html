@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Team Thrasher and our streetwear and sport shoe collection.">
+    <title>About Us - Thrasher</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="Image/logoforweb-removebg-preview.png" alt="Thrasher home"></a>
+            </div>
+            <nav aria-label="Main navigation">
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="nav-shop">
+                            <a href="products.html">Shop <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <ul class="nav-dropdown" aria-label="Shop categories">
+                                <li><a href="products.html">All shoes</a></li>
+                                <li><a href="productsdunklow.html">Dunk Low</a></li>
+                                <li><a href="productsjordan.html">Jordan</a></li>
+                                <li><a href="productsSportshoes.html">Sport shoes</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+            </nav>
+            <button class="menu-icon" type="button" aria-label="Toggle navigation" aria-controls="MenuItems" aria-expanded="false" onclick="menutoggle()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        </div>
+    </header>
+
+    <main class="info-page">
+        <section class="page-hero">
+            <div class="small-container">
+                <p class="page-eyebrow">ABOUT THRASHER</p>
+                <h1>Good shoes move you forward.</h1>
+                <p>We bring streetwear style and sport-ready shoes together in one place, so finding your next favorite pair feels easy.</p>
+            </div>
+        </section>
+
+        <section class="small-container about-story">
+            <div class="about-copy">
+                <p class="page-eyebrow">OUR POINT OF VIEW</p>
+                <h2>Made for your everyday rotation.</h2>
+                <p>From classic low-tops to shoes built for getting outside, our collection is for people who want comfort and character in every step.</p>
+                <p>Team Thrasher is here to make it simple to explore different styles, compare your options, and choose a pair that feels like you.</p>
+                <a class="btn" href="products.html">Explore the collection <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="about-highlight">
+                <span class="about-highlight-icon" aria-hidden="true"><i class="fa fa-bolt"></i></span>
+                <p class="page-eyebrow">STEP INTO YOUR STYLE</p>
+                <h2>Find your next pair.</h2>
+                <p>Explore sneakers for daily wear, sport, and everything in between.</p>
+            </div>
+        </section>
+
+        <section class="small-container about-values" aria-label="What you can explore">
+            <article class="info-card">
+                <span class="info-card-icon" aria-hidden="true"><i class="fa fa-star"></i></span>
+                <h2>Iconic style</h2>
+                <p>Discover familiar silhouettes and fresh looks in our curated shoe selection.</p>
+            </article>
+            <article class="info-card">
+                <span class="info-card-icon" aria-hidden="true"><i class="fa fa-compass"></i></span>
+                <h2>Room to explore</h2>
+                <p>Browse collections by style and find options that fit your daily routine.</p>
+            </article>
+            <article class="info-card">
+                <span class="info-card-icon" aria-hidden="true"><i class="fa fa-heart"></i></span>
+                <h2>Your own rotation</h2>
+                <p>Build a shoe lineup that feels comfortable, versatile, and personal.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">Copyright 2026 - Team Thrasher</p>
+        </div>
+    </footer>
+
+    <script>
+                    var currentPage = decodeURIComponent(window.location.pathname.split("/").pop() || "index.html");
+            document.querySelectorAll("#MenuItems a").forEach(function (link) {
+                var linkPage = decodeURIComponent(new URL(link.href).pathname.split("/").pop());
+                if (linkPage === currentPage) {
+                    link.setAttribute("aria-current", "page");
+                }
+            });
+
+            if (!document.querySelector("#MenuItems a[aria-current=page]")) {
+                document.querySelector("#MenuItems .nav-shop > a").setAttribute("aria-current", "page");
+            }
+
+function menutoggle() {
+            var menu = document.getElementById("MenuItems");
+            var button = document.querySelector(".menu-icon");
+            var isOpen = button.getAttribute("aria-expanded") === "true";
+            menu.classList.toggle("is-open", !isOpen);
+                menu.style.maxHeight = isOpen ? "0px" : menu.scrollHeight + 24 + "px";
+            button.setAttribute("aria-expanded", String(!isOpen));
+        }
+    </script>
+</body>
+</html>
